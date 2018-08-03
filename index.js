@@ -100,7 +100,7 @@ export function persistFilter(state, paths = [], transformType = 'whitelist') {
                 if(path.hasOwnProperty('path')) {
                     const value = filterObject(path, state, iterable);
                     
-                   // if(!isEmpty(value)) {
+                    if(!isEmpty(value)) {
                         if(Array.isArray(value)) {
                             iterable ?
                                 (subset = subset.setIn(Array.isArray(path.path) ? path.path : [path.path], subset.getIn(Array.isArray(path.path) ? path.path : [path.path]).filter((x) => false)))
@@ -112,15 +112,15 @@ export function persistFilter(state, paths = [], transformType = 'whitelist') {
                                 iterable ? (subset = subset.deleteIn([path.path, key])) : unset(subset, `${path.path}[${key}]`);
                             });
                         }
-                  //  }
+                    }
                 }
             }
             else {
                 const value = iterable ? state.getIn(Array.isArray(path) ? path : [path]) : get(state, path);
                 
-             //   if(!isUndefined(value)) {
+             if(!isUndefined(value)) {
                     iterable ? (subset = subset.deleteIn(Array.isArray(path) ? path : [path])) : unset(subset, path);
-             //   }
+             }
             }
         });
     }
