@@ -56,9 +56,6 @@
     "peerDependencies": {
         "immutable": "^4.0.0-rc.9"
     },
-    "files": [
-        "dist"
-    ],
     "main": "index.js",
     "scripts": {
         "test":    "npm run-script mocha -- --require babel-register spec.js",
