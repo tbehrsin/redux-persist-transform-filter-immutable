@@ -1,5 +1,5 @@
 {
-    "name": "@actra-development-oss/redux-persist-transform-filter-immutable",
+    "name": "redux-persist-transform-filter-immutable",
     "description": "Filter transformator for redux-persist supporting immutable.js",
     "keywords": [
         "react",
