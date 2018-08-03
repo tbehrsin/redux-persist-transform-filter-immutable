@@ -59,7 +59,7 @@
     "files": [
         "dist"
     ],
-    "main": "dist/index.js",
+    "main": "index.js",
     "scripts": {
         "test":    "npm run-script mocha -- --require babel-register spec.js",
         "build":   "npm run-script rimraf -- ./dist && npm run-script mkdirp -- dist && npm run-script babel -- index.js -o dist/index.js",
